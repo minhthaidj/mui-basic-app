@@ -7,14 +7,15 @@ import { Grid } from "@mui/material";
 function App() {
   return (
     <div>
+      <h1>ABC</h1>
       <SearchAppBar />
-      {/* <Grid container spacing={2}>
-        {jobs.slice(0, 5).map((job) => (
+      <Grid container spacing={2}>
+        {jobs.slice(0, 4).map((job) => (
           <Grid key={job.id} item xs={4}>
             <JobCard job={job} />
           </Grid>
         ))}
-      </Grid> */}
+      </Grid>
     </div>
   );
 }
