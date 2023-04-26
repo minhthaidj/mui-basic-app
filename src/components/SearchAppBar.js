@@ -54,28 +54,43 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 export default function SearchAppBar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
-        <Toolbar>
-          <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
-          >
-            Job Routing
-          </Typography>
-          <Search>
-            <SearchIconWrapper>
-              <SearchIcon />
-            </SearchIconWrapper>
-            <StyledInputBase
-              placeholder="Search…"
-              inputProps={{ "aria-label": "search" }}
-            />
-          </Search>
-          <LoginIcon />
-          <Button color="inherit">Login</Button>
-        </Toolbar>
+      <AppBar
+        position="static"
+        sx={{
+          bgcolor: "#F398A9",
+        }}
+      >
+        <Box sx={{ display: "flex", justifyContent: "center" }}>
+          <Toolbar sx={{ maxWidth: 1000, flexGrow: 1 }}>
+            <Box sx={{ display: "flex", alignItems: "center", flexGrow: 1 }}>
+              <Typography
+                variant="h6"
+                component="div"
+                sx={{ display: { xs: "none", sm: "block" } }}
+              >
+                Job Routing
+              </Typography>
+              <Search>
+                <SearchIconWrapper>
+                  <SearchIcon />
+                </SearchIconWrapper>
+                <StyledInputBase
+                  placeholder="Search…"
+                  inputProps={{ "aria-label": "search" }}
+                />
+              </Search>
+            </Box>
+            <Box
+              sx={{
+                display: { xs: "none", sm: "flex" },
+                alignItems: "center",
+              }}
+            >
+              <LoginIcon />
+              <Button color="inherit">Login</Button>
+            </Box>
+          </Toolbar>
+        </Box>
       </AppBar>
     </Box>
   );
